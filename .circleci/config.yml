@@ -11,8 +11,6 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run: echo $ABC
-    environment:
-      ABC: red
   print_world:
     docker:
       - image: circleci/node:13.8.0
