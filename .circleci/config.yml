@@ -23,7 +23,7 @@ jobs:
           at: ~/
       - run: cat ~/output.txt
   save_cache:
-    working_directory: ~/
+    working_directory: ~/hieu
     docker:
       - image: circleci/node:13.8.0
     steps:
