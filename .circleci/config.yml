@@ -35,6 +35,7 @@ jobs:
       - restore_cache:
           keys:
             - v1-my-project-{{ checksum "a.js" }}
+            - v1-my-project-
 workflows:
   # Name the workflow "welcome"
   welcome:
