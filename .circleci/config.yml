@@ -42,3 +42,6 @@ workflows:
       - print_hello:
           requires:
             - save_hello
+      - save_cache:
+         requires:
+           - print_hello
