@@ -22,6 +22,17 @@ jobs:
       - attach_workspace:
           at: ~/
       - run: cat ~/output.txt
+  save_cache:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - save_cache:
+          key: v1-my-project-{{ checksum "a.js" }}
+          paths:
+            - ~/.m2
+      - restore_cache:
+          keys:
+            - v1-my-project-{{ checksum "a.js" }}
 workflows:
   # Name the workflow "welcome"
   welcome:
